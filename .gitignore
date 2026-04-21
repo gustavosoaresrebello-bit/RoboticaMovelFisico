@@ -1,0 +1,9 @@
+# Pastas de compilação do ROS (não devem ir ao Git)
+build/
+devel/
+logs/
+.catkin_tools/
+
+# Configurações locais do VS Code
+.vscode/
+.history/
