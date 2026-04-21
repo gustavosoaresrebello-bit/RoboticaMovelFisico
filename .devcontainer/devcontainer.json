@@ -1,0 +1,23 @@
+{
+    "name": "ROS Noetic Dev",
+    "build": {
+        // Isso diz ao VS Code para usar o Dockerfile que está na pasta de cima
+        "dockerfile": "../Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            // Extensões úteis que serão instaladas automaticamente no container
+            "extensions": [
+                "ms-iot.vscode-ros",
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "twxs.cmake"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "runArgs": [
+        "--net=host",
+        "--privileged"
+    ]
+}
