@@ -1,0 +1,17 @@
+{
+    "name": "ROS Noetic",
+    "dockerFile": "Dockerfile",
+    "runArgs": [
+        "--net=host",
+        "--env=DISPLAY=host.docker.internal:0",
+        "--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw"
+    ],
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-iot.vscode-ros"
+    ],
+    "postCreateCommand": "rosdep install --from-paths src --ignore-src -r -y || echo 'Configuração inicial concluída'"
+}
